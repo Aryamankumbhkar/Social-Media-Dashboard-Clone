@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(127, 26, 43);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Phone container */
+#insta_page_cont {
+  height: 650px;
+  width: 400px;
+  border: 5px solid black;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+#insta_page {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(8, 8, 8);
+  display: flex;
+  flex-direction: column;
+  position: relative; 
+}
+
+#full_story {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+#story_page {
+  display: none;
+}
+
+#story_div {
+  height: 110px;
+  width: 100%;
+  background-color: rgb(8, 8, 8);
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-top: 15px;
+  flex-shrink: 0;
+  border-bottom: 0.5px solid #222;
+}
+
+#story_div::-webkit-scrollbar {
+  display: none;
+}
+
+.stories {
+  height: 80px;
+  width: 80px;
+  /* background-color: white; */
+  border: 2px solid rgb(31, 216, 31);
+  border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.stories img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+#post_div {
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
+}
+
+#post_div::-webkit-scrollbar {
+  display: none;
+}
+
+#post_div .post {
+  overflow: hidden;
+}
+
+#post_div .post img {
+  height: auto;
+  width: 100%;
+  display: block;
+}
+
+#post_div .desc {
+  padding: 6px 10px;
+  margin-bottom: 10px;
+}
+
+#post_div .desc p {
+  color: #ccc;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin-bottom: 4px;
+}
+
+#post_div .desc .like_btn {
+  padding: 4px 18px;
+  border-radius: 6px;
+  border: none;
+  margin-top: 5px;
+  cursor: pointer;
+  background-color: #f1dfdf;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+.like_btn.liked {
+  font-weight: 600;
+  color: red;
+}
